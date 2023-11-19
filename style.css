@@ -1,14 +1,123 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-font-family: 'mulish', sans-serif;
-font-size: 1.6rem;
+  font-family: "mulish", sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+}
+
+/*----- Mobile-First -----*/
+
+.layout {
+  max-width: 69.9rem;
+}
+
+/*Header Mobile-First*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #065e7c;
+  padding: 1.2rem 2.8rem;
+  gap: 2.5rem;
+}
+
+header form {
+  flex: 1;
+}
+
+header form label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+header form input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.20);
+  border: none;
+  padding: 1.2rem 1.6rem;
+  border-radius: .4rem;
+  outline: none;
+  color: white;
+}
+
+header form input::placeholder {
+  color: rgb(148, 148, 148);
+}
+
+header #avatar {
+  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+}
+
+/*Main Mobile-First*/
+
+main .img-hero img {
+  width: 100%;
+}
+
+main .cat-title h1 {
+  font-size: 2.4rem;
+  line-height: 160%;
+  font-weight: 700;
+  color: #202024;
+}
+
+main .cat-title p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #121214;
+}
+
+main .cat-title .icons {
+  margin: .8rem 0 3.1rem 0;
+}
+
+main .icons img:nth-child(1) {
+  margin-right: 1.2rem;
+}
+
+main .cat-title {
+  padding: 3.1rem 0 68.8rem 2.2rem;
+}
+
+/*Aside Mobile-First*/
+
+aside {
+  display: none;
+}
+
+/*Footer Mobile-First*/
+
+footer {
+  background-color: #387E96;
+  padding: 1.6rem;
+}
+
+footer p {
+  color: white;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+
+  body {
+    background-color: #F4FCFF;
+  }
+  
 }
