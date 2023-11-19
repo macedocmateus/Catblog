@@ -145,7 +145,8 @@ footer p {
 
   main {
     grid-area: main;
-    max-width: 80rem;
+    width: 80rem;
+    height: 87.1rem;
     padding: 0 0 0 10.9rem;
   }
 
@@ -173,12 +174,67 @@ footer p {
 
   aside {
     grid-area: aside;
+    display: initial;
+    padding-right: 11rem;
+  }
+
+  aside .asidelayout {
+    width: 38.4rem;
+    height: 61.5rem;
+  }
+
+  aside .asidelayout h1 {
+    font-size: 2.4rem;
+    line-height: 160%;
+    font-weight: 700;
+    color: #202024;
+    margin-bottom: 3.2rem;
+  }
+
+  aside .catdescription {
+    max-width: 21.7rem;
+    height: auto;
+  }
+
+  aside .catdescription h2 {
+    font-size: 1.8rem;
+    line-height: 160%;
+    font-weight: 700;
+    color: #202024;
+  }
+
+  aside .catdescription p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: #121214;
+  }
+  
+  aside .catlist {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  aside .catwrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    max-width: 38.2rem;
+    max-height: 8.4rem;
+  }
+
+  aside .catwrapper img {
+    max-width: 15.1rem;
+    max-height: 8.4rem;
+    border-radius: .5rem;
   }
 
   /*Footer Desktop-version*/
 
   footer {
     grid-area: footer;
+    margin-top: 3.9rem;
   }
 
 }
