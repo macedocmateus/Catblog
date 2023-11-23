@@ -2,27 +2,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "mulish", sans-serif;
+  font-size: 1.6rem;
 }
 
 :root {
   font-size: 62.5%;
-  
 }
 
 body {
-  font-family: "mulish", sans-serif;
-  font-size: 1.6rem;
   height: 100vh;
-  
+  background-color: white;
+}
+
+.layout {
+  max-width: 100%;
 }
 
 /*----- Mobile-First -----*/
 
-.layout {
-  max-width: 69.9rem;
-}
+@media (min-width: 320px) and (max-width: 768px) {
 
-/*Header Mobile-First*/
+/*Header*/
 
 header {
   display: flex;
@@ -34,7 +35,7 @@ header {
 }
 
 header form {
-  flex: 1;
+flex: 1;
 }
 
 header form label {
@@ -59,17 +60,16 @@ header form input::placeholder {
 }
 
 header #avatar {
-  
   border-radius: 50%;
   width: 4.2rem;
   height: 4.2rem;
   object-fit: cover;
 }
 
-/*Main Mobile-First*/
+/*Main*/
 
 main .img-hero img {
-  width: 100%;
+  width: 100vw;
 }
 
 main .cat-information {
@@ -96,14 +96,13 @@ main section p {
   font-weight: 400;
   color: #121214;
 }
-
-/*Aside Mobile-First*/
+/*Aside*/
 
 aside {
   display: none;
 }
 
-/*Footer Mobile-First*/
+/*Footer*/
 
 footer {
   background-color: #387E96;
@@ -117,124 +116,101 @@ footer p {
   text-align: center;
 }
 
+}
+
 /*----- Desktop-Version -----*/
 
-@media (min-width: 700px) {
+@media (min-width: 769px) {
 
-  body {
-    background-color: #F4FCFF;
-  }
+.layout {
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "main aside"
+  "footer footer";
+}
 
-  .layout {
-    max-width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main aside"
-    "footer footer";
-    gap: 4.4rem 3.4rem;
-  }
+/*Header*/
 
-  /*Header Desktop-version*/
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #065e7c;
+  padding: 1.2rem 2.8rem;
+  gap: 2.5rem;
+}
 
-  header {
-    grid-area: header;
-  }
+header form {
+  flex: 1;
+}
+    
+header form label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+    
+header form input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.20);
+  border: none;
+  padding: 1.2rem 1.6rem;
+  border-radius: .4rem;
+  outline: none;
+  color: white;
+}
+    
+header form input::placeholder {
+  color: rgb(148, 148, 148);
+}
+    
+header #avatar {
+  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+}
 
-  /*Main Desktop-version*/
+/*Main*/
 
-  main {
-    grid-area: main;
-    width: 80rem;
-    height: 87.1rem;
-    padding: 0 0 0 10.9rem;
-  }
+main {
+  grid-area: main;
+}
 
-  main .cat-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3.1rem;
-  }
+main .img-hero img {
+  width: 100vw;
+  max-width: 80.3rem;
+  max-height: 40.5rem;
+}
 
-  main .img-hero img {
-    max-height: 40.5rem;
-    border-radius: .5rem;
-  }
+/*Aside*/
 
-  main .cat-information {
-    padding: 3.1rem 0 0 .2rem;
-  }
+aside {
+  grid-area: aside;
+}
 
-  main .cat-title .icons {
-    margin: 0;
-  }
+aside .catlist img {
+  width: 15.1rem;
+  height: 8.4rem;
+}
 
-  /*Aside Desktop-version*/
+/*Footer*/
 
-  aside {
-    grid-area: aside;
-    display: initial;
-    padding-right: 11rem;
-  }
+footer {
+  grid-area: footer;
+  background-color: #387E96;
+  padding: 1.6rem;
+  margin-top: 3.9rem;
+}
 
-  aside .asidelayout {
-    width: 38.4rem;
-    height: 61.5rem;
-  }
-
-  aside .asidelayout h1 {
-    font-size: 2.4rem;
-    line-height: 160%;
-    font-weight: 700;
-    color: #202024;
-    margin-bottom: 3.2rem;
-  }
-
-  aside .catdescription {
-    max-width: 21.7rem;
-    height: auto;
-  }
-
-  aside .catdescription h2 {
-    font-size: 1.8rem;
-    line-height: 160%;
-    font-weight: 700;
-    color: #202024;
-  }
-
-  aside .catdescription p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 160%;
-    color: #121214;
-  }
-  
-  aside .catlist {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-  }
-
-  aside .catwrapper {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    max-width: 38.2rem;
-    max-height: 8.4rem;
-  }
-
-  aside .catwrapper img {
-    max-width: 15.1rem;
-    max-height: 8.4rem;
-    border-radius: .5rem;
-  }
-
-  /*Footer Desktop-version*/
-
-  footer {
-    grid-area: footer;
-    margin-top: 3.9rem;
-  }
+footer p {
+  color: white;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
 
 }
