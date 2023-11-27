@@ -15,6 +15,10 @@ body {
   background-color: white;
 }
 
+.layout {
+  max-width: 76.7rem;
+}
+
 /*----- Mobile-First -----*/
 
 /*Header*/
@@ -63,7 +67,7 @@ header #avatar {
 /*Main*/
 
 main .img-hero img {
-  width: 100%;
+  width: 100vw;
 }
 
 main .cat-information {
@@ -115,14 +119,35 @@ footer p {
 
 @media (min-width:768px) {
   
-  body {
-    background-color: #0a5069;
-  }
-  
   .layout {
-    max-width: 100%;
+    max-width:143.9rem;
   }
-  
+
+  main .cat-information {
+    padding: 3.9rem 0 12rem 3.9rem;
+  }
+
+  main .cat-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.2rem;
+  }
+
+  main .cat-title .icons {
+    margin: 0;
+  }
+
+  main .cat-title h1 {
+    font-size: 3.2rem;
+  }
+
+  main .img-hero img {
+    min-height: 40.5rem;
+    max-height: 35vw;
+    border-radius: 0 0 .5rem .5rem;
+  }
+
 }
 
 /*----- Desktop-Version -----*/
