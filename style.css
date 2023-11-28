@@ -155,11 +155,61 @@ footer p {
 @media (min-width:1440px) {
   
   body {
-    background-color: #0b1b20;
+    background-color: #F4FCFF;
   }
   
   .layout {
-    max-width: 100%;
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 90.9rem;
+    gap: 4.4rem 3.4rem;
   }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  main .cat-information {
+    padding: 0;
+  }
+
+  main .cat-title h1 {
+    font-size: 2.4rem;
+  }
+
+  main .img-hero img {
+    max-width: 80rem;
+    max-height: 40.5rem;
+    border-radius: .5rem;
+    box-sizing: content-box;
+    margin-left: 10.9rem;
+  }
+
+  aside {
+    display: initial;
+    grid-area: aside;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  aside .catlist img {
+    width: 15.1rem;
+    height: 8.4rem;
+    border-radius: .5rem;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+
   
 }
