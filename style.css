@@ -139,7 +139,7 @@ footer p {
   }
 
   main .cat-title h1 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 
   main .img-hero img {
@@ -178,7 +178,7 @@ footer p {
   }
 
   main .cat-information {
-    padding: 0;
+    padding: 3.1rem 0 0 11rem;
   }
 
   main .cat-title h1 {
@@ -189,15 +189,49 @@ footer p {
     max-width: 80rem;
     max-height: 40.5rem;
     border-radius: .5rem;
-    box-sizing: content-box;
     margin-left: 10.9rem;
   }
 
   aside {
     display: initial;
     grid-area: aside;
-    width: fit-content;
-    height: fit-content;
+    width: 38.4rem;
+    height: 61.5rem;
+  }
+
+  aside .catlist {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  aside .asidelayout h1 {
+    color: #202024;
+    margin-bottom: 3.2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+
+  aside .asidelayout .catdescription h2 {
+    color: #202024;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+
+  aside .asidelayout .catdescription p {
+    color: #202024;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  aside .catwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
   }
 
   aside .catlist img {
@@ -206,10 +240,13 @@ footer p {
     border-radius: .5rem;
   }
 
+  aside .catdescription {
+    width: 21.7rem;
+    height: auto;
+  }
+
   footer {
     grid-area: footer;
   }
 
-
-  
 }
